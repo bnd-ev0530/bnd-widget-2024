@@ -1,0 +1,89 @@
+body {
+  /* background: url("./pokemon-bg.jpg"); */
+  background-color: #000;
+  background-size: cover;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  width: 100%;
+}
+h2 {
+  color: #fff;
+}
+#board {
+  height: 532px;
+  width: 475px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: whitesmoke;
+  border: 10px solid lightgrey;
+}
+button {
+  all: unset;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  color: #fff;
+  margin: 5px 0;
+  padding: 10px;
+}
+
+.card {
+  height: 128px;
+  width: 90px;
+  margin: 2.5px;
+}
+
+.opening {
+  width: 100vw;
+  height: 100vh;
+  background: #be0062;
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 100px;
+  z-index: 2;
+  animation: hideSplashScreen 0.4s 0.8s ease-in-out forwards;
+}
+
+.opening img {
+  width: 300px;
+}
+
+#share {
+  display: none;
+}
+#share.showing {
+  display: block;
+}
+
+@keyframes hideSplashScreen {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@media screen and (max-width: 768px) {
+  #board {
+    height: 532px;
+    width: 100%;
+    margin: 0;
+    padding: 1px;
+    box-sizing: border-box;
+  }
+  .card {
+    height: 100px;
+    width: 17vw;
+    margin: 3px;
+  }
+}
