@@ -1,0 +1,87 @@
+.nav-list a {
+  color: #000;
+}
+.game-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.game-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+}
+.game-btn button {
+  width: 1200px;
+  height: 40px;
+  font-size: 28px;
+}
+#score {
+  display: flex;
+  justify-content: center;
+  font-size: 32px;
+}
+#game {
+  width: 1200px;
+  height: 800px;
+  background-color: aquamarine;
+  position: absolute;
+  top: 50px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+#member {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  top: 347px;
+  left: 100px;
+}
+.animate {
+  animation: jump 0.5s linear 0s;
+}
+@keyframes jump {
+  0% {
+    top: 280px;
+  }
+  30% {
+    top: 250px;
+  }
+  70% {
+    top: 250px;
+  }
+  100% {
+    top: 280px;
+  }
+}
+#obstacle {
+  width: 130px;
+  height: 130px;
+  position: relative;
+  top: 215px;
+  left: 90%;
+  overflow: hidden;
+}
+
+.start {
+  animation: block 1.3s infinite linear;
+}
+
+@keyframes block {
+  0% {
+    left: 1200px;
+  }
+  100% {
+    left: -700px;
+  }
+}
+#ground {
+  width: 1200px;
+  height: 200px;
+  position: absolute;
+  bottom: 175px;
+  border-radius: 0 0 10px 10px;
+}

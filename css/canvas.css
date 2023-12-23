@@ -1,0 +1,68 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: gainsboro;
+  position: relative;
+}
+.canvas {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: gainsboro;
+  padding: 20px 20px;
+}
+canvas {
+  width: 800px;
+  height: 800px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.btns {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.color-options {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.color-option {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  cursor: pointer;
+  transition: transform ease-in-out 0.1s;
+}
+
+.color-option:hover {
+  transform: scale(1.2);
+}
+
+input#color {
+  background-color: #fff;
+  width: 50px;
+  border: 1px solid #fff;
+  margin-left: 5px;
+}
+
+input#text {
+  all: unset;
+  padding: 10px 0;
+  text-align: center;
+  background-color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: opacity linear 0.1s;
+}
+input#file {
+  display: none;
+}
