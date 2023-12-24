@@ -13,7 +13,7 @@ fetch(
       vidThumb = curr.snippet.thumbnails.maxres.url;
 
       markup = `
-      <div class="swiper-slide"> <img src='${vidThumb}'/> <a href='#'  onclick=goSong('${curr.snippet.resourceId.videoId}')></a></div>`;
+      <div class="swiper-slide" onclick=goSong('${curr.snippet.resourceId.videoId}');><img src='${vidThumb}' /></div>`;
       console.log(markup);
       markupUpdate += markup;
     });
@@ -28,10 +28,6 @@ fetch(
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
-      },
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
       },
       breakpoints: {
         640: {
