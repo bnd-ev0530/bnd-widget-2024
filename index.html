@@ -213,9 +213,9 @@
           </form>
         </div> -->
 
-        <!-- <div class="weather" id="weather">
+        <div class="weather" id="weather">
           <span></span>
-        </div> -->
+        </div>
         <h2 class="sub-tit">To do List</h2>
         <div class="todo">
           <form id="todo-form">
@@ -232,16 +232,9 @@
         </div>
         <h2 class="sub-tit">BND Apps</h2>
         <div class="layout-box">
-          <div class="layout-box__btn">
-            <a
-              href="https://rustic-birch-47d.notion.site/b00173f9ab324948ab6861ba6c372ca6?v=6df39ab84821451ba730899a6a61e109&pvs=4"
-              target="_blank"
-              >📆 Schedule</a
-            >
-          </div>
-          <div class="layout-box__btn">
-            <a href="/card/index.html" target="_blank">🃏 shffle card </a>
-          </div>
+          <div class="layout-box__btn" onclick="goSchedule();">📆 Schedule</div>
+          <div class="layout-box__btn" onclick="goSpotify();">📆 Spotify</div>
+          <div class="layout-box__btn" onclick="goCard();">🃏 shffle card</div>
           <div class="layout-box__btn">
             <!-- <a href="runner.html">🏃‍♂️ Runner </a> -->
             <a href="#" onclick="alert('To be continue...')">🏃‍♂️ Runner </a>
@@ -265,9 +258,24 @@
     <script src="js/mv.js"></script>
     <!-- <script src="js/photo.js"></script> -->
     <script src="js/todo.js"></script>
-    <!-- <script src="js/weather.js"></script> -->
+    <script src="js/weather.js"></script>
     <!-- <script src="js/countdown.js"></script> -->
     <script src="js/dday.js"></script>
     <script src="js/swiper.js"></script>
+    <script>
+      function goSchedule() {
+        window.open(
+          "https://rustic-birch-47d.notion.site/b00173f9ab324948ab6861ba6c372ca6?v=6df39ab84821451ba730899a6a61e109&pvs=4",
+          "_blank"
+        );
+      }
+      function goCard() {
+        window.open("/card", "_blank");
+      }
+
+      function goSpotify() {
+        window.open("/spotify", "_blank");
+      }
+    </script>
   </body>
 </html>
