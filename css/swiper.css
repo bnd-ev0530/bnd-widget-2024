@@ -22,7 +22,7 @@
   object-fit: cover;
   border-radius: 10px;
 }
-.swiper-slide a {
+/* .swiper-slide a {
   display: none;
 }
 .swiper-slide:hover a {
@@ -37,4 +37,4 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
+} */
