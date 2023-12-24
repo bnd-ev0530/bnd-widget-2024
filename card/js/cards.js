@@ -78,7 +78,7 @@ function startGame() {
     board.push(row);
   }
 
-  setTimeout(hideCards);
+  setTimeout(hideCards, 3000);
 }
 
 function hideCards() {
