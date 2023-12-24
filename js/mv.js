@@ -17,9 +17,9 @@ const songs = [
   },
 ];
 const iframe = document.querySelector(".mv iframe");
-const artist = document.querySelector("#songs span");
-const changeBtn = document.querySelector(".mv .random-button");
-const urlBtn = document.querySelector(".mv .url-button");
+// const artist = document.querySelector("#songs span");
+// const changeBtn = document.querySelector(".mv .random-button");
+// const urlBtn = document.querySelector(".mv .url-button");
 let url;
 function randomSong() {
   const number = Math.floor(Math.random() * songs.length);
@@ -27,11 +27,16 @@ function randomSong() {
   iframe.src = `https://www.youtube.com/embed/${songs[number].song}?mute=1&autoplay=1`;
   url = `https://www.youtube.com/embed/${songs[number].song}?autoplay=1`;
 }
-randomSong();
+//randomSong();
 
 function goMovie() {
   window.open(url);
 }
 
-changeBtn.addEventListener("click", randomSong);
-urlBtn.addEventListener("click", goMovie);
+function goSong(url) {
+  iframe.src = `https://www.youtube.com/embed/${url}?mute=1&autoplay=1`;
+  url = `https://www.youtube.com/embed/${url}?autoplay=1`;
+}
+
+//changeBtn.addEventListener("click", randomSong);
+//urlBtn.addEventListener("click", goMovie);

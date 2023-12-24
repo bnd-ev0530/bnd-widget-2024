@@ -16,3 +16,7 @@ var swiper = new Swiper(".mySwiper", {
     },
   },
 });
+// Update swiper after dynamically inserting slides
+if (swiper && typeof swiper.update === "function") {
+  swiper.update();
+}

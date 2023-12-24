@@ -18,7 +18,7 @@
     <!-- Link Swiper's CSS -->
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
     />
 
     <link rel="stylesheet" href="css/style.css" />
@@ -33,27 +33,27 @@
         <h2 class="sub-tit">Now Playing...</h2>
 
         <div class="mv">
-          <div class="mute-box"></div>
+          <!-- <div class="mute-box"></div> -->
           <iframe
             width="100%"
             height="400"
-            src=""
+            src="https://www.youtube.com/embed/QKVa-ksDhhs?si=wGCc7lznUtKUe6XU?mute=1&autoplay=1"
             title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen
           ></iframe>
-          <div id="songs">
+          <!-- <div id="songs">
             <span></span>
-          </div>
-          <button type="button" class="url-button">
+          </div> -->
+          <!-- <button type="button" class="url-button">
             <i class="fa fa-arrows-alt" aria-hidden="true"></i>
           </button>
           <button type="button" class="random-button">
             <i class="fa fa-random"></i>
-          </button>
+          </button> -->
         </div>
-        <h2 class="sub-tit">BND Gallery</h2>
+        <!-- <h2 class="sub-tit">Playlist</h2> -->
         <!-- <div class="photo">
           <img src="img/00.gif" />
           <button id="bg-change"><i class="fa fa-image"></i></button>
@@ -104,73 +104,7 @@
 
         <!-- Swiper -->
         <div class="swiper mySwiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <img
-                src="https://kozofficial.com/resources/main/f936851a-3339-4248-8980-f2c6765b38c6.jpg"
-              />
-              <a
-                href="https://www.notion.so/b00173f9ab324948ab6861ba6c372ca6?v=cb8a1c5edd464ca2b255d75b1550c332&pvs=4"
-                target="_blank"
-                >성호</a
-              >
-            </div>
-            <div class="swiper-slide">
-              <img
-                src="https://kozofficial.com/resources/main/1f0821c5-f032-478d-90d4-744bf04aa8e7.jpg"
-              />
-              <a
-                href="https://www.notion.so/b00173f9ab324948ab6861ba6c372ca6?v=a8020cf096534c5697718c33ce5832b5"
-                target="_blank"
-                >리우</a
-              >
-            </div>
-            <div class="swiper-slide">
-              <img
-                src="https://kozofficial.com/resources/main/3ba43ad3-b026-4102-963f-93242e6ea0b5.jpg
-                "
-              />
-              <a
-                href="https://www.notion.so/b00173f9ab324948ab6861ba6c372ca6?v=7c0a65ae8bb24363bd8d783d502c4cf6"
-                target="_blank"
-                >명재현</a
-              >
-            </div>
-            <div class="swiper-slide">
-              <img
-                src="https://kozofficial.com/resources/main/61b069bb-d12d-4d0d-9d1e-9d97ea756a00.jpg
-              "
-              />
-              <a
-                href="https://www.notion.so/b00173f9ab324948ab6861ba6c372ca6?v=b6c31c573669476785f7789f257b5ea4"
-                target="_blank"
-                >태산</a
-              >
-            </div>
-            <div class="swiper-slide">
-              <img
-                src="https://kozofficial.com/resources/main/907c84af-1a01-4252-9de1-aeeae703eb98.jpg
-              "
-              />
-              <a
-                href="https://www.notion.so/b00173f9ab324948ab6861ba6c372ca6?v=3c8b9337e9cf4474afd471622bf65872"
-                target="_blank"
-                >이한</a
-              >
-            </div>
-            <div class="swiper-slide">
-              <img
-                src="https://kozofficial.com/resources/main/49ffc4a0-00ac-4b10-b766-0043e1a2abaf.jpg
-              "
-              />
-              <a
-                href="https://www.notion.so/b00173f9ab324948ab6861ba6c372ca6?v=0ed0edd1d66c4865b7fb8580eb2bf0c1"
-                target="_blank"
-                >운학</a
-              >
-            </div>
-          </div>
-          <div class="swiper-pagination"></div>
+          <div class="swiper-wrapper list"></div>
         </div>
       </div>
       <div class="right">
@@ -213,6 +147,7 @@
           </form>
         </div> -->
 
+        <h2 class="sub-tit">Weather</h2>
         <div class="weather" id="weather">
           <span></span>
         </div>
@@ -233,7 +168,6 @@
         <h2 class="sub-tit">BND Apps</h2>
         <div class="layout-box">
           <div class="layout-box__btn" onclick="goSchedule();">📆 Schedule</div>
-          <div class="layout-box__btn" onclick="goSpotify();">📆 Spotify</div>
           <div class="layout-box__btn" onclick="goCard();">🃏 shffle card</div>
           <div class="layout-box__btn">
             <!-- <a href="runner.html">🏃‍♂️ Runner </a> -->
@@ -248,7 +182,7 @@
     <!-- fontaweawesome https://fontawesome.com/v5/search?m=free -->
     <script src="https://kit.fontawesome.com/6478f529f2.js"></script>
     <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
     <!-- <script src="js/bg.js"></script> -->
     <script src="js/greeting.js"></script>
@@ -261,7 +195,9 @@
     <script src="js/weather.js"></script>
     <!-- <script src="js/countdown.js"></script> -->
     <script src="js/dday.js"></script>
+    <script src="js/youtube.js"></script>
     <script src="js/swiper.js"></script>
+
     <script>
       function goSchedule() {
         window.open(

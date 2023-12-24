@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    
+
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-md-12">
+            <div class="list"></div>
+      </div>
+    </div>
+
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script>
+      fetch(
+        "https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=PL_Cqw69_m_yzndHP69oTCny_i7bt3Tn-M&key=AIzaSyAL4Z90CnJoDcl74Rh_r9eBnz5DvXTw4FQ"
+      )
+        .then((res) => {
+          return res.json();
+        })
+        .then((data) => {
+          data.items.forEach((curr) => {
+            vidTitle = curr.snippet.title;
+            vidURL =
+              "https://www.youtube.com/watch?v=" +
+              curr.snippet.resourceId.videoId;
+            vidThumb = curr.snippet.thumbnails.maxres.url;
+            console.log(curr.snippet);
+            markup = `<a href='${vidURL}' target='_blank'><img src=${vidThumb}>${vidTitle}</a>`;
+            document
+              .querySelector("div.list")
+              .insertAdjacentHTML("beforeend", markup);
+          });
+        });
+
+      ///////////////////////////////////////////////////////////
+
+      let player;
+
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player("player", {
+          height: "360",
+          width: "100%",
+          videoId: "",
+          events: {
+            onReady: onPlayerReady,
+          },
+        });
+      }
+
+      function onPlayerReady(event) {}
+
+      function search() {
+        const query = document.getElementById("searchInput").value;
+
+        fetch(
+          `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${query}&type=video&key=YOUR_YOUTUBE_API_KEY`
+        )
+          .then((response) => response.json())
+          .then((data) => {
+            displayResults(data.items);
+          })
+          .catch((error) => {
+            console.error("Error fetching data:", error);
+          });
+      }
+
+      function displayResults(videos) {
+        const resultsDiv = document.getElementById("results");
+        resultsDiv.innerHTML = "";
+
+        videos.forEach((video) => {
+          const videoId = video.id.videoId;
+          const title = video.snippet.title;
+          const thumbnail = video.snippet.thumbnails.default.url;
+
+          const videoElement = `
+                <div class="card mb-2">
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                            <img src="${thumbnail}" alt="${title}" class="img-fluid">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">${title}</h5>
+                                <button class="btn btn-primary" onclick="playVideo('${videoId}')">Play</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+          resultsDiv.innerHTML += videoElement;
+        });
+      }
+
+      function playVideo(videoId) {
+        player.loadVideoById(videoId);
+      }
+    </script>
+  </body>
+</html>
