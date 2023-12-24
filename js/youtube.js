@@ -25,9 +25,13 @@ fetch(
     var swiper = new Swiper(".mySwiper", {
       slidesPerView: 3.2,
       spaceBetween: 10,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
       pagination: {
         el: ".swiper-pagination",
-        clickable: false,
+        clickable: true,
       },
       breakpoints: {
         640: {
