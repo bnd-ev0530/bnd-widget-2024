@@ -150,7 +150,6 @@ section > div {
     width: 90vw;
   }
   .right {
-    order: -1;
     width: 100%;
     padding: 10px 10px 0 10px;
     box-sizing: border-box;
@@ -161,8 +160,17 @@ section > div {
     padding: 10px;
     box-sizing: border-box;
   }
+
   .layout-box .layout-box__btn {
-    padding: 12px 6px;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .layout-box .layout-box__btn span {
+    display: none;
+  }
+
   /* .mobile {
     display: flex;
   } */
